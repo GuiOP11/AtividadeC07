@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <math.h>
+
 
 int main() {
     int numero, tipo;
@@ -7,11 +9,11 @@ int main() {
     float totalResidencial = 0, totalComercial = 0, totalIndustrial = 0;
     int countResidencial = 0, countComercial = 0; 
 
-    printf("=== SISTEMA DE LEITURA DE CONSUMO ===\n");
+
     
     while (1) {
       
-        printf("\nDigite o número do consumidor (0 para sair): ");
+        printf("\n Digite o numero do consumidor (0 para sair): ");
         scanf("%d", &numero);
         
         if (numero == 0) {
@@ -19,11 +21,11 @@ int main() {
         }
         
      
-        printf("Quantidade de kWh consumidos no mês: ");
+        printf(" Quantidade de kWh consumidos no mês: ");
         scanf("%f", &kWh);
         
 
-        printf("Tipo do consumidor (1-Residencial, 2-Comercial, 3-Industrial): ");
+        printf(" Tipo do consumidor 1-Residencial, 2-Comercial, 3-Industrial : ");
         scanf("%d", &tipo);
         
       
@@ -43,7 +45,7 @@ int main() {
                 totalIndustrial += kWh;
                 break;
             default:
-                printf("Tipo inválido! Considere apenas 1, 2 ou 3.\n");
+                printf("Tipo inválido! Considere apenas 1, 2 ou 3. \n");
                 continue; 
         }
         
@@ -53,7 +55,7 @@ int main() {
     }
     
 
-    printf("\n=== RELATÓRIO FINAL ===\n");
+    printf("\n  RELATÓRIO FINAL \n");
     printf("Total de consumo residencial (tipo 1): %.2f kWh\n", totalResidencial);
     printf("Total de consumo comercial   (tipo 2): %.2f kWh\n", totalComercial);
     printf("Total de consumo industrial  (tipo 3): %.2f kWh\n", totalIndustrial);
